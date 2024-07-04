@@ -143,6 +143,7 @@ function getTypes(msgs: readonly AminoMsg[]): SimpleMap<TypedDataField[]> {
     msgs.forEach((msg: AminoMsg, index: number) => {
 
         // @dev typeUrl IS HARDCODED for now as I am unable to fix AminoTypesMap
+        // const typeUrl = AminoTypesMap.fromAmino(msg).typeUrl
         const typeUrl = '/Switcheo.carbon.order.MsgCreateOrder'
         
         const msgType = msg.type.split('/')[1]
